@@ -1,10 +1,9 @@
-package task.selenium.scenario;
+package task.selenium.test;
 
 
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import task.selenium.driver.DriverManager;
@@ -65,8 +64,7 @@ public class NewTopicTest {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.clickLoggedUserName();
         loginPage.logoutUser();
-        driver.close();
-        driver.quit();
+        DriverManager.closeDriver();
     }
 
     private void verifyResult(final String newSubject, final String newMessage) {

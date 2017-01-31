@@ -19,7 +19,6 @@ public class DriverManager {
 
     private static WebDriver driver;
 
-
     public synchronized static WebDriver getDriver() {
         if (driver == null) {
             switch (SupportedBrowser.valueOf(BROWSER.toUpperCase())) {
@@ -37,6 +36,12 @@ public class DriverManager {
         return driver;
     }
 
+    public static void closeDriver() {
+        driver.quit();
+        driver = null;
+
+    }
+
     private static WebDriver getFirefoxDriver() {
         ProfilesIni profile = new ProfilesIni();
         FirefoxProfile myprofile = profile.getProfile("default");
@@ -47,7 +52,6 @@ public class DriverManager {
         System.setProperty("webdriver.chrome.driver", getDriverAbsolutePath());
         return new ChromeDriver();
     }
-
 
     private static String getDriverAbsolutePath() {
         URL url = DriverManager.class.getResource(DRIVER_PATH);
