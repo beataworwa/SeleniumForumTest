@@ -11,7 +11,6 @@ public abstract class AbstractPage {
 
     WebElement getWebElement(final By element) {
         return driver.findElement(element);
-
     }
 
     public boolean isElementDisplayed(final By element) {

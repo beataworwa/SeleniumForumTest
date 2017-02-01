@@ -16,7 +16,6 @@ public class LoginPage extends AbstractPage {
         this.driver = driver;
     }
 
-
     public LoginPage setUsername(final String username) {
         getWebElement(usernameField).click();
         getWebElement(usernameField).sendKeys(username);
@@ -52,6 +51,5 @@ public class LoginPage extends AbstractPage {
         return isElementDisplayed(usernameField) &&
                 isElementDisplayed(passwordField) &&
                 isElementDisplayed(loginButton);
-
     }
 }

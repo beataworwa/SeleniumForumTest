@@ -29,7 +29,4 @@ public class PostingPage extends AbstractPage {
         getWebElement(submitButton).click();
         return new PostingPage(driver);
     }
-
 }
-
-

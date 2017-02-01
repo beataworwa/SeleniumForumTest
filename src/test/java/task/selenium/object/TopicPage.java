@@ -19,5 +19,4 @@ public class TopicPage extends AbstractPage {
     public String getMessage(final String subjectText) {
         return getWebElement(By.xpath(String.format(MESSAGE_PATH, subjectText))).getText();
     }
-
 }

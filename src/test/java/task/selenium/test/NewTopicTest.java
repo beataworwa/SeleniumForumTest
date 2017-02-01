@@ -1,6 +1,5 @@
 package task.selenium.test;
 
-
 import com.google.common.base.Throwables;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
