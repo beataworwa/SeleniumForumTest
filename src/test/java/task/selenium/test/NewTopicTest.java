@@ -101,7 +101,6 @@ public class NewTopicTest {
         TopicPage topicPage = new TopicPage(driver);
         verifyMessage(newMessage, topicPage.getMessage(newSubject));
         Assert.assertTrue(topicPage.isSubjectTopicDisable(newSubject));
-
     }
 
     private void verifyMessage(final String expectedMessage, final String resultMessage) {
@@ -110,5 +109,4 @@ public class NewTopicTest {
         IntStream.range(0, expectedTopicMessage.length).forEach(i ->
                 Assert.assertEquals(expectedTopicMessage[i], resultTopicMessage[i]));
     }
-
 }
