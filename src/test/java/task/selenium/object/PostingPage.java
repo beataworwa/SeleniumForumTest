@@ -5,10 +5,9 @@ import org.openqa.selenium.WebDriver;
 
 public class PostingPage extends AbstractPage {
 
-    private By subjectField = By.id("subject");
-    private By messageTextArea = By.id("message");
-    private By submitButton = By.xpath("//input[@value='Submit']");
-
+    private final By subjectField = By.id("subject");
+    private final By messageTextArea = By.id("message");
+    private final By submitButton = By.xpath("//input[@value='Submit']");
 
     public PostingPage(final WebDriver driver) {
         this.driver = driver;

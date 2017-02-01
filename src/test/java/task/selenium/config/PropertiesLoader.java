@@ -8,7 +8,7 @@ public class PropertiesLoader {
 
     private static final String PROPERTIES_FILE_PATH = "/properties/test.properties";
 
-    public Properties loadPropertiesFromFile() {
+    Properties loadPropertiesFromFile() {
         Properties prop = new Properties();
         InputStream inputStream = this.getClass().getResourceAsStream(PROPERTIES_FILE_PATH);
         try {

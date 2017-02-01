@@ -5,11 +5,11 @@ import org.openqa.selenium.WebDriver;
 
 public class ViewForumPage extends AbstractPage {
 
+    private final By newTopicButton = By.xpath("//span[contains(text(),'New Topic')]");
+
     public ViewForumPage(final WebDriver webDriver) {
         this.driver = webDriver;
     }
-
-    private By newTopicButton = By.xpath("//span[contains(text(),'New Topic')]");
 
     public ViewForumPage createTopic() {
         getWebElement(newTopicButton).click();

@@ -7,9 +7,9 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.firefox.internal.ProfilesIni;
 
+import java.io.File;
 import java.net.URISyntaxException;
 import java.net.URL;
-import java.nio.file.Paths;
 import java.util.concurrent.TimeUnit;
 
 import static task.selenium.config.TestProperties.BROWSER;
@@ -55,12 +55,13 @@ public class DriverManager {
 
     private static String getDriverAbsolutePath() {
         URL url = DriverManager.class.getResource(DRIVER_PATH);
+        File file = null;
         try {
-            return Paths.get(url.toURI()).toFile().getAbsolutePath();
+            file = new File(url.toURI());
         } catch (URISyntaxException e) {
             Throwables.propagate(e);
         }
-        return "";
+        return file.getAbsolutePath();
     }
 
 }

@@ -6,7 +6,7 @@ import task.selenium.driver.DriverManager;
 
 public class MainPage extends AbstractPage {
 
-    private By usernameField = By.className("forumtitle");
+    private final By usernameField = By.className("forumtitle");
 
     public MainPage(WebDriver driver) {
         this.driver = driver;
@@ -15,5 +15,9 @@ public class MainPage extends AbstractPage {
     public MainPage goToForum() {
         getWebElement(usernameField).click();
         return new MainPage(DriverManager.getDriver());
+    }
+
+    public boolean isForumNameDisplayed() {
+        return isElementDisplayed(usernameField);
     }
 }

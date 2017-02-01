@@ -8,6 +8,7 @@ public class TestProperties {
     public static final String PASSWORD;
     public static final String BROWSER;
     public static final String DRIVER_PATH;
+    public static final String SCREENSHOT_PATH;
 
     static {
         Properties prop = new PropertiesLoader().loadPropertiesFromFile();
@@ -16,5 +17,6 @@ public class TestProperties {
         PASSWORD = prop.getProperty("password");
         BROWSER = prop.getProperty("browser");
         DRIVER_PATH = prop.getProperty("driverPath");
+        SCREENSHOT_PATH = prop.getProperty("screenshotPath");
     }
 }
