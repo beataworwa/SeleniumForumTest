@@ -11,7 +11,6 @@ public class LoginPage extends AbstractPage {
     private final By passwordField = By.id("password");
     private final By loginButton = By.name("login");
 
-
     public LoginPage(final WebDriver driver) {
         this.driver = driver;
     }
